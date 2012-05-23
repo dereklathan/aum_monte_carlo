@@ -37,12 +37,12 @@ int Cube::get_domain_z(){
 	return domain_z;
 }
 
-void set_occupy_space(int x, int y, int z, bool occupied){
+void Cube::set_occupy_space(int x, int y, int z, bool occupied){
 	atomlocation[x][y][z]=occupied;
 }
 
-bool get_occupy_space(int x, int y, int z){
-	if(atomlocation[x][y][z]==true)
+bool Cube::get_occupy_space(int x, int y, int z){
+	if(atomlocation[x][y][z]==1)
 		return true;
 	else
 		return false;

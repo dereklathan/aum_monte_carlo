@@ -34,3 +34,5 @@ int* Infile_reader::getunitcellsize(){
 float Infile_reader::getpercentdomainfill(){return percentdomainfill;}
 
 int Infile_reader::gettimesteps(){return timesteps;}
+
+string Infile_reader::getoutfilename(){return outfilename;}
