@@ -1,8 +1,7 @@
 #include "Atom.h"
-#include <iostream>
 using namespace std;
 
-Atom::Atom(float atom_radius){
+Atom::Atom(string atom_radius){
 	radius = atom_radius;
 	attempted = false;
 }
@@ -39,7 +38,7 @@ bool Atom::get_attempted(){
 	return attempted;
 }
 
-float Atom::get_radius(){
+string Atom::get_radius(){
 	return radius;
 }
 

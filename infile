@@ -1,0 +1,4 @@
+monte_carlo#name of vtf file
+10 15 20#x y z lengths for cube
+50.00#percent of cube to fill
+100#number of timesteps

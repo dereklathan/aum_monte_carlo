@@ -1,15 +1,16 @@
 #ifndef ATOM_H
 #define ATOM_H
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Atom{
 	private:
 		int x_pos, y_pos, z_pos;
 		bool attempted;
-		float radius;
+		string radius;
 	public:
-		Atom(float);
+		Atom(string);
 		//constructor
 		void set_x_pos(int);
 		//sets x coordinate of atom center
@@ -27,7 +28,7 @@ class Atom{
 		//if attempt to move has been made for timestep, should be true. false otherwise
 		bool get_attempted();
 		//returns true if attempt has been made, false otherwise
-		float get_radius();
+		string get_radius();
 };
 
 #endif
