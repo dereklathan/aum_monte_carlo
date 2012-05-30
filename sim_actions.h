@@ -19,7 +19,12 @@ class sim_actions{
 		//constructor seeds random number generator opens file for outfile_writer
 		list<Atom> fill_cube(Cube, float);
 		//fills cube according to percentage to fill and returns list of atoms added to cube
+		void close_writer();
+		//closes vtf file writer
 		void add_timestep(Cube, list<Atom>);
+		//increments one timestep
+		bool all_attempted(list<Atom>);
+		//checks if all atoms in list have made attempt to move
 
 };
 #endif
