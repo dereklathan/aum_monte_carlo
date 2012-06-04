@@ -22,9 +22,7 @@ class outfile_writer{
 		//closes output file
 		void define_atoms(list<Atom>);
 		//defines all atoms in list<Atom>
-		void set_initial_positions(Cube,list<Atom>);
+		void write_timestep(Cube,list<Atom>);
 		//sets initial positions of atoms and unitcell params
-		void add_timestep(list<Atom>);
-		//increments one timestep
 };
 #endif

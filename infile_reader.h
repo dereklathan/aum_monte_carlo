@@ -12,6 +12,7 @@ class Infile_reader{
 		int unitcellsize[3];
 		float percentdomainfill;
 		int timesteps;
+		int graph_interval;
 	public:
 		Infile_reader();
 		//default constructor
@@ -26,6 +27,7 @@ class Infile_reader{
 		float getpercentdomainfill();
 		//returns percentage of domain to fill with atoms
 		int gettimesteps();
-		//returns number of timesteps 			
+		//returns number of timesteps 	
+		int get_graph_interval();		
 };
 #endif

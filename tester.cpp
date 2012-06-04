@@ -15,7 +15,9 @@ int main(){
 	reader.setData();
 	c.set_domain(reader.getunitcellsize()[0], reader.getunitcellsize()[1], reader.getunitcellsize()[2]);
 	sim_actions action(reader.getoutfilename());
-	action.fill_cube(c, reader.getpercentdomainfill());
-	
+	list<Atom> atomlist = action.fill_cube(c, reader.getpercentdomainfill());
+	for(int d=0; d<reader.gettimesteps(); d++)
+		action.add_timestep(c, atomlist);
+	action.close_writer();
 	return 0;
 }

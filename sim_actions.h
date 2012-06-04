@@ -4,6 +4,7 @@
 #include <list>
 #include <cstdlib>
 #include <ctime>
+#include <omp.h>
 #include "Atom.h"
 #include "cube.h"
 #include "infile_reader.h"
@@ -17,11 +18,11 @@ class sim_actions{
 	public:
 		sim_actions(string);
 		//constructor seeds random number generator opens file for outfile_writer
-		list<Atom> fill_cube(Cube, float);
+		list<Atom> fill_cube(Cube&, float);
 		//fills cube according to percentage to fill and returns list of atoms added to cube
 		void close_writer();
 		//closes vtf file writer
-		void add_timestep(Cube, list<Atom>);
+		void add_timestep(Cube&, list<Atom>&);
 		//increments one timestep
 		bool all_attempted(list<Atom>);
 		//checks if all atoms in list have made attempt to move

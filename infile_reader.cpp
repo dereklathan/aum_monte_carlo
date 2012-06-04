@@ -23,6 +23,9 @@ void Infile_reader::setData(){
 	while(reader.peek()!='\n')
 		reader.get( );
 	reader >> timesteps;
+	while(reader.peek()!='\n')
+		reader.get();
+	reader >> graph_interval;
 	reader.close();
 }
 
@@ -36,3 +39,5 @@ float Infile_reader::getpercentdomainfill(){return percentdomainfill;}
 int Infile_reader::gettimesteps(){return timesteps;}
 
 string Infile_reader::getoutfilename(){return outfilename;}
+
+int Infile_reader::get_graph_interval(){return graph_interval;}

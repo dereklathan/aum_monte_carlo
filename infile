@@ -1,4 +1,5 @@
-monte_carlo#name of vtf file
-10 15 20#x y z lengths for cube
-50.00#percent of cube to fill
-100#number of timesteps
+test#name of vtf file
+5 5 4#x y z lengths for cube
+30#percent of cube to fill
+1000#number of timesteps
+100#graph interval (create graph every time this many timesteps have passed)
